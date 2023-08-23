@@ -32,10 +32,10 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.düzenleBtn = new System.Windows.Forms.Button();
+            this.kolusturBtn = new System.Windows.Forms.Button();
+            this.listBtn = new System.Windows.Forms.Button();
+            this.araBtn = new System.Windows.Forms.Button();
             this.aratxt = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -46,12 +46,12 @@
             // 
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button6);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.düzenleBtn);
+            this.groupBox1.Controls.Add(this.kolusturBtn);
+            this.groupBox1.Controls.Add(this.listBtn);
+            this.groupBox1.Controls.Add(this.araBtn);
             this.groupBox1.Controls.Add(this.aratxt);
-            this.groupBox1.Location = new System.Drawing.Point(80, 45);
+            this.groupBox1.Location = new System.Drawing.Point(80, 37);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(553, 267);
             this.groupBox1.TabIndex = 59;
@@ -84,53 +84,54 @@
             this.dataGridView1.Size = new System.Drawing.Size(517, 149);
             this.dataGridView1.TabIndex = 48;
             // 
-            // button3
+            // düzenleBtn
             // 
-            this.button3.BackColor = System.Drawing.Color.Blue;
-            this.button3.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(264, 229);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(98, 23);
-            this.button3.TabIndex = 47;
-            this.button3.Text = "DÜZENLE";
-            this.button3.UseVisualStyleBackColor = false;
+            this.düzenleBtn.BackColor = System.Drawing.Color.Blue;
+            this.düzenleBtn.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.düzenleBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.düzenleBtn.Location = new System.Drawing.Point(264, 229);
+            this.düzenleBtn.Name = "düzenleBtn";
+            this.düzenleBtn.Size = new System.Drawing.Size(98, 23);
+            this.düzenleBtn.TabIndex = 47;
+            this.düzenleBtn.Text = "DÜZENLE";
+            this.düzenleBtn.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // kolusturBtn
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(369, 229);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(164, 23);
-            this.button2.TabIndex = 46;
-            this.button2.Text = "YENİ KİŞİ OLUŞTUR";
-            this.button2.UseVisualStyleBackColor = false;
+            this.kolusturBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.kolusturBtn.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.kolusturBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.kolusturBtn.Location = new System.Drawing.Point(369, 229);
+            this.kolusturBtn.Name = "kolusturBtn";
+            this.kolusturBtn.Size = new System.Drawing.Size(164, 23);
+            this.kolusturBtn.TabIndex = 46;
+            this.kolusturBtn.Text = "YENİ KİŞİ OLUŞTUR";
+            this.kolusturBtn.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // listBtn
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button6.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button6.Location = new System.Drawing.Point(449, 27);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(84, 23);
-            this.button6.TabIndex = 45;
-            this.button6.Text = "LİSTELE";
-            this.button6.UseVisualStyleBackColor = false;
+            this.listBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.listBtn.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.listBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.listBtn.Location = new System.Drawing.Point(449, 27);
+            this.listBtn.Name = "listBtn";
+            this.listBtn.Size = new System.Drawing.Size(84, 23);
+            this.listBtn.TabIndex = 45;
+            this.listBtn.Text = "LİSTELE";
+            this.listBtn.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // araBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(368, 27);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 43;
-            this.button1.Text = "ARA";
-            this.button1.UseVisualStyleBackColor = false;
+            this.araBtn.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.araBtn.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.araBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.araBtn.Location = new System.Drawing.Point(368, 27);
+            this.araBtn.Name = "araBtn";
+            this.araBtn.Size = new System.Drawing.Size(75, 23);
+            this.araBtn.TabIndex = 43;
+            this.araBtn.Text = "ARA";
+            this.araBtn.UseVisualStyleBackColor = false;
+            this.araBtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // aratxt
             // 
@@ -161,10 +162,10 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button düzenleBtn;
+        private System.Windows.Forms.Button kolusturBtn;
+        private System.Windows.Forms.Button listBtn;
+        private System.Windows.Forms.Button araBtn;
         private System.Windows.Forms.TextBox aratxt;
     }
 }
