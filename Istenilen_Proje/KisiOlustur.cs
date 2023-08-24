@@ -57,6 +57,12 @@ namespace Istenilen_Proje
                     soyisim = yenisoytxt.Text.Trim();
                     telefon = yeniteltxt.Text.Trim();
 
+                    if (String.IsNullOrWhiteSpace(isim) || String.IsNullOrWhiteSpace(soyisim) || String.IsNullOrWhiteSpace(telefon))
+                    {
+                        MessageBox.Show("Lütfen tüm alanları doldurunuz.", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;  // Hata mesajını gösterdikten sonra kodun geri kalanını çalıştırmamak için return ediyoruz.
+                    }
+
                     bag.Open();
                     komut.Connection = bag;
                     komut.CommandText = "insert into Kisiler (Isim,Soyisim,Telefon) values ('" + isim + "','" + soyisim + "','" + telefon + "')";

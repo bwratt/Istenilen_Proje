@@ -102,14 +102,34 @@ namespace Istenilen_Proje
 
         private void düzenleBtn_Click(object sender, EventArgs e)
         {
-            Düzenle form2 = new Düzenle();
-            form2.ShowDialog();
-        }
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+                string isim = selectedRow.Cells["Isim"].Value.ToString(); // "Isim" burada DataGridView'deki isim sütununun adını temsil etmektedir
+                string soyisim = selectedRow.Cells["Soyisim"].Value.ToString(); // "Soyisim" burada DataGridView'deki soyisim sütununun adını temsil etmektedir
+                string telefon = selectedRow.Cells["Telefon"].Value.ToString(); // "Telefon" burada DataGridView'deki telefon sütununun adını temsil etmektedir
+                 // "Adres" burada DataGridView'deki adres sütununun adını temsil etmektedir
+
+
+                Form1 form1 = new Form1();
+                // İkinci formu açmak ve verileri aktarmak için aşağıdaki gibi bir kod kullanabilirsiniz:
+                Düzenle ikinciForm = new Düzenle(form1);
+                ikinciForm.SetVeriler(isim, soyisim, telefon);
+                ikinciForm.ShowDialog();
+            }
+
+           
+           }
 
         private void kolusturBtn_Click(object sender, EventArgs e)
         {
             KisiOlustur form3 = new KisiOlustur();
             form3.ShowDialog();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

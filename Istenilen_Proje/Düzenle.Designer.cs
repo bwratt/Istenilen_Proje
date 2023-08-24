@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Düzenle));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.silBtn = new System.Windows.Forms.Button();
+            this.kaydetBtn = new System.Windows.Forms.Button();
             this.telTxt = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.soyisimTxt = new System.Windows.Forms.TextBox();
@@ -56,38 +56,42 @@
             this.pictureBox1.TabIndex = 69;
             this.pictureBox1.TabStop = false;
             // 
-            // button4
+            // silBtn
             // 
-            this.button4.BackColor = System.Drawing.Color.Red;
-            this.button4.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button4.Location = new System.Drawing.Point(348, 178);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(70, 23);
-            this.button4.TabIndex = 68;
-            this.button4.Text = "SİL";
-            this.button4.UseVisualStyleBackColor = false;
+            this.silBtn.BackColor = System.Drawing.Color.Red;
+            this.silBtn.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.silBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.silBtn.Location = new System.Drawing.Point(348, 178);
+            this.silBtn.Name = "silBtn";
+            this.silBtn.Size = new System.Drawing.Size(70, 23);
+            this.silBtn.TabIndex = 68;
+            this.silBtn.Text = "SİL";
+            this.silBtn.UseVisualStyleBackColor = false;
+            this.silBtn.Click += new System.EventHandler(this.silBtn_Click_1);
             // 
-            // button3
+            // kaydetBtn
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button3.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(447, 178);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(70, 23);
-            this.button3.TabIndex = 67;
-            this.button3.Text = "KAYDET";
-            this.button3.UseVisualStyleBackColor = false;
+            this.kaydetBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.kaydetBtn.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.kaydetBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.kaydetBtn.Location = new System.Drawing.Point(447, 178);
+            this.kaydetBtn.Name = "kaydetBtn";
+            this.kaydetBtn.Size = new System.Drawing.Size(70, 23);
+            this.kaydetBtn.TabIndex = 67;
+            this.kaydetBtn.Text = "KAYDET";
+            this.kaydetBtn.UseVisualStyleBackColor = false;
+            this.kaydetBtn.Click += new System.EventHandler(this.kaydetBtn_Click);
             // 
             // telTxt
             // 
+            this.telTxt.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.telTxt.Location = new System.Drawing.Point(348, 138);
             this.telTxt.Multiline = true;
             this.telTxt.Name = "telTxt";
             this.telTxt.Size = new System.Drawing.Size(169, 20);
             this.telTxt.TabIndex = 64;
             this.telTxt.TextChanged += new System.EventHandler(this.telTxt_TextChanged);
+            this.telTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.telTxt_KeyPress);
             // 
             // label4
             // 
@@ -101,16 +105,17 @@
             this.label4.TabIndex = 63;
             this.label4.Text = "TELEFON NO";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // soyisimTxt
             // 
+            this.soyisimTxt.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.soyisimTxt.Location = new System.Drawing.Point(348, 94);
             this.soyisimTxt.Multiline = true;
             this.soyisimTxt.Name = "soyisimTxt";
             this.soyisimTxt.Size = new System.Drawing.Size(169, 20);
             this.soyisimTxt.TabIndex = 62;
             this.soyisimTxt.TextChanged += new System.EventHandler(this.soyisimTxt_TextChanged);
+            this.soyisimTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.soyisimTxt_KeyPress);
             // 
             // label3
             // 
@@ -124,16 +129,17 @@
             this.label3.TabIndex = 61;
             this.label3.Text = "SOYİSİM";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // isimTxt
             // 
+            this.isimTxt.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.isimTxt.Location = new System.Drawing.Point(348, 54);
             this.isimTxt.Multiline = true;
             this.isimTxt.Name = "isimTxt";
             this.isimTxt.Size = new System.Drawing.Size(169, 20);
             this.isimTxt.TabIndex = 60;
             this.isimTxt.TextChanged += new System.EventHandler(this.isimTxt_TextChanged);
+            this.isimTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.isimTxt_KeyPress);
             // 
             // label2
             // 
@@ -147,7 +153,6 @@
             this.label2.TabIndex = 59;
             this.label2.Text = "İSİM";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // groupBox1
             // 
@@ -155,8 +160,8 @@
             this.groupBox1.Controls.Add(this.Validasyon2);
             this.groupBox1.Controls.Add(this.Validasyon1);
             this.groupBox1.Controls.Add(this.isimTxt);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button4);
+            this.groupBox1.Controls.Add(this.kaydetBtn);
+            this.groupBox1.Controls.Add(this.silBtn);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.telTxt);
@@ -221,8 +226,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button silBtn;
         private System.Windows.Forms.TextBox telTxt;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox soyisimTxt;
@@ -233,5 +237,6 @@
         private System.Windows.Forms.Label Validasyon3;
         private System.Windows.Forms.Label Validasyon2;
         private System.Windows.Forms.Label Validasyon1;
+        private System.Windows.Forms.Button kaydetBtn;
     }
 }
