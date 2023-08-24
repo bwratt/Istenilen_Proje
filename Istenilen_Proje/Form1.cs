@@ -41,9 +41,19 @@ namespace Istenilen_Proje
         {
             veritablosu.Clear();
 
-            OleDbDataAdapter siringa = new OleDbDataAdapter("select * from Kisiler where Isim like '" + aratxt.Text + "%'", bag);
+            string aramaMetni = aratxt.Text;
+            OleDbDataAdapter siringa = new OleDbDataAdapter(
+                "SELECT * FROM Kisiler WHERE " +
+                "Isim LIKE @Arama OR " +
+                "Soyisim LIKE @Arama OR " +
+                "Telefon LIKE @Arama", bag);
+
+           
+            siringa.SelectCommand.Parameters.AddWithValue("@Arama", aramaMetni + "%");
+
             siringa.Fill(veritablosu);
             dataGridView1.DataSource = veritablosu;
+          
         }
 
         private void Form1_Load(object sender, EventArgs e)

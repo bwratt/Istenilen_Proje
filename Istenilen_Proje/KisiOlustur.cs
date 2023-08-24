@@ -25,12 +25,12 @@ namespace Istenilen_Proje
 
         public void DataGridViewiGuncelle()
         {
-            // DataGridView'in veri kaynağını temizle
-            Form1 form1 = Application.OpenForms["Form1"] as Form1; // Form1'e erişim
+            
+            Form1 form1 = Application.OpenForms["Form1"] as Form1;
             form1.dataGridView1.DataSource = null;
             form1.dataGridView1.Rows.Clear();
 
-            // Veritabanından verileri al ve DataGridView'e ekle
+            
             bag.Open();
             komut.Connection = bag;
             komut.CommandText = "SELECT * FROM Kisiler";
@@ -52,7 +52,6 @@ namespace Istenilen_Proje
                 {
                     string isim, soyisim, telefon;
 
-
                     isim = yeniisimtxt.Text.Trim();
                     soyisim = yenisoytxt.Text.Trim();
                     telefon = yeniteltxt.Text.Trim();
@@ -60,7 +59,13 @@ namespace Istenilen_Proje
                     if (String.IsNullOrWhiteSpace(isim) || String.IsNullOrWhiteSpace(soyisim) || String.IsNullOrWhiteSpace(telefon))
                     {
                         MessageBox.Show("Lütfen tüm alanları doldurunuz.", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;  // Hata mesajını gösterdikten sonra kodun geri kalanını çalıştırmamak için return ediyoruz.
+                        return;
+                    }
+
+                    if (telefon.Length != 10 || !telefon.All(char.IsDigit))
+                    {
+                        MessageBox.Show("Telefon numarası 10 adet rakam içermeli.", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;  
                     }
 
                     bag.Open();
@@ -74,12 +79,9 @@ namespace Istenilen_Proje
                     yenisoytxt.Text = "";
                     yeniteltxt.Text = "";
 
-
                     this.Close();
 
                     DataGridViewiGuncelle();
-
-
                 }
             }
             catch (Exception)
@@ -100,13 +102,18 @@ namespace Istenilen_Proje
                 yeniteltxt.Text = "";
             }
 
-            if (yeniteltxt.Text.Length > 10)
+            if (yeniteltxt.Text.Length >=10)
             {
                 yeniteltxt.Text = yeniteltxt.Text.Substring(0, 10);
                 yeniteltxt.SelectionStart = yeniteltxt.Text.Length; 
             }
+            
+                 
+            
 
             string telefon = yeniteltxt.Text.Trim();
+
+
 
             if (String.IsNullOrWhiteSpace(telefon))
             {

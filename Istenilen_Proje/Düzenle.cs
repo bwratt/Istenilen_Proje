@@ -120,8 +120,13 @@ namespace Istenilen_Proje
                                 MessageBox.Show("Lütfen tüm alanları doldurunuz.", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 return;  
                             }
+                            if (yeniTelefon.Length != 10 || !yeniTelefon.All(char.IsDigit))
+                            {
+                                MessageBox.Show("Telefon numarası 10 adet rakam içermeli.", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                return;
+                            }
 
-                            
+
                             bag.Open();
                             komut.Connection = bag;
                             komut.CommandText = "UPDATE Kisiler SET Isim = @YeniIsim, Soyisim = @YeniSoyisim, Telefon = @YeniTelefon  WHERE Telefon = @Telefon";

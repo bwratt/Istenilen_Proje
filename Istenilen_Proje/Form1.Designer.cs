@@ -53,7 +53,7 @@
             this.groupBox1.Controls.Add(this.aratxt);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(569, 263);
+            this.groupBox1.Size = new System.Drawing.Size(572, 263);
             this.groupBox1.TabIndex = 59;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
@@ -75,14 +75,14 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 67);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 70);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(517, 156);
+            this.dataGridView1.Size = new System.Drawing.Size(517, 153);
             this.dataGridView1.TabIndex = 48;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
@@ -119,9 +119,9 @@
             this.listBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.listBtn.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.listBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.listBtn.Location = new System.Drawing.Point(449, 27);
+            this.listBtn.Location = new System.Drawing.Point(461, 27);
             this.listBtn.Name = "listBtn";
-            this.listBtn.Size = new System.Drawing.Size(84, 23);
+            this.listBtn.Size = new System.Drawing.Size(72, 23);
             this.listBtn.TabIndex = 45;
             this.listBtn.Text = "LİSTELE";
             this.listBtn.UseVisualStyleBackColor = false;
@@ -132,7 +132,7 @@
             this.araBtn.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.araBtn.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.araBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.araBtn.Location = new System.Drawing.Point(368, 27);
+            this.araBtn.Location = new System.Drawing.Point(380, 27);
             this.araBtn.Name = "araBtn";
             this.araBtn.Size = new System.Drawing.Size(75, 23);
             this.araBtn.TabIndex = 43;
@@ -144,7 +144,7 @@
             // 
             this.aratxt.Location = new System.Drawing.Point(45, 30);
             this.aratxt.Name = "aratxt";
-            this.aratxt.Size = new System.Drawing.Size(317, 20);
+            this.aratxt.Size = new System.Drawing.Size(233, 20);
             this.aratxt.TabIndex = 42;
             // 
             // Form1
