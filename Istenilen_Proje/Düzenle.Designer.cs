@@ -39,9 +39,9 @@
             this.isimTxt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.Validasyon1 = new System.Windows.Forms.Label();
-            this.Validasyon2 = new System.Windows.Forms.Label();
             this.Validasyon3 = new System.Windows.Forms.Label();
+            this.Validasyon2 = new System.Windows.Forms.Label();
+            this.Validasyon1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -94,11 +94,13 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(266, 144);
+            this.label4.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.label4.Location = new System.Drawing.Point(273, 138);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 15);
             this.label4.TabIndex = 63;
             this.label4.Text = "TELEFON NO";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // soyisimTxt
@@ -115,11 +117,13 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(280, 100);
+            this.label3.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.label3.Location = new System.Drawing.Point(273, 94);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 15);
             this.label3.TabIndex = 61;
             this.label3.Text = "SOYİSİM";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // isimTxt
@@ -136,11 +140,13 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(302, 60);
+            this.label2.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.label2.Location = new System.Drawing.Point(273, 54);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(30, 15);
             this.label2.TabIndex = 59;
             this.label2.Text = "İSİM";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // groupBox1
@@ -165,15 +171,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DÜZENLE";
             // 
-            // Validasyon1
+            // Validasyon3
             // 
-            this.Validasyon1.AutoSize = true;
-            this.Validasyon1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Validasyon1.Location = new System.Drawing.Point(345, 77);
-            this.Validasyon1.Name = "Validasyon1";
-            this.Validasyon1.Size = new System.Drawing.Size(66, 14);
-            this.Validasyon1.TabIndex = 69;
-            this.Validasyon1.Text = "Validasyon1";
+            this.Validasyon3.AutoSize = true;
+            this.Validasyon3.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Validasyon3.Location = new System.Drawing.Point(345, 161);
+            this.Validasyon3.Name = "Validasyon3";
+            this.Validasyon3.Size = new System.Drawing.Size(66, 14);
+            this.Validasyon3.TabIndex = 71;
+            this.Validasyon3.Text = "Validasyon3";
             // 
             // Validasyon2
             // 
@@ -185,15 +191,15 @@
             this.Validasyon2.TabIndex = 70;
             this.Validasyon2.Text = "Validasyon2";
             // 
-            // Validasyon3
+            // Validasyon1
             // 
-            this.Validasyon3.AutoSize = true;
-            this.Validasyon3.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Validasyon3.Location = new System.Drawing.Point(345, 161);
-            this.Validasyon3.Name = "Validasyon3";
-            this.Validasyon3.Size = new System.Drawing.Size(66, 14);
-            this.Validasyon3.TabIndex = 71;
-            this.Validasyon3.Text = "Validasyon3";
+            this.Validasyon1.AutoSize = true;
+            this.Validasyon1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Validasyon1.Location = new System.Drawing.Point(345, 77);
+            this.Validasyon1.Name = "Validasyon1";
+            this.Validasyon1.Size = new System.Drawing.Size(66, 14);
+            this.Validasyon1.TabIndex = 69;
+            this.Validasyon1.Text = "Validasyon1";
             // 
             // Düzenle
             // 
