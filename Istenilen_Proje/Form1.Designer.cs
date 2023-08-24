@@ -51,11 +51,12 @@
             this.groupBox1.Controls.Add(this.listBtn);
             this.groupBox1.Controls.Add(this.araBtn);
             this.groupBox1.Controls.Add(this.aratxt);
-            this.groupBox1.Location = new System.Drawing.Point(80, 37);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(553, 267);
+            this.groupBox1.Size = new System.Drawing.Size(569, 263);
             this.groupBox1.TabIndex = 59;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // pictureBox1
             // 
@@ -81,8 +82,10 @@
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(517, 149);
+            this.dataGridView1.Size = new System.Drawing.Size(517, 156);
             this.dataGridView1.TabIndex = 48;
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // düzenleBtn
             // 
@@ -95,6 +98,7 @@
             this.düzenleBtn.TabIndex = 47;
             this.düzenleBtn.Text = "DÜZENLE";
             this.düzenleBtn.UseVisualStyleBackColor = false;
+            this.düzenleBtn.Click += new System.EventHandler(this.düzenleBtn_Click);
             // 
             // kolusturBtn
             // 
@@ -107,6 +111,7 @@
             this.kolusturBtn.TabIndex = 46;
             this.kolusturBtn.Text = "YENİ KİŞİ OLUŞTUR";
             this.kolusturBtn.UseVisualStyleBackColor = false;
+            this.kolusturBtn.Click += new System.EventHandler(this.kolusturBtn_Click);
             // 
             // listBtn
             // 
@@ -119,6 +124,7 @@
             this.listBtn.TabIndex = 45;
             this.listBtn.Text = "LİSTELE";
             this.listBtn.UseVisualStyleBackColor = false;
+            this.listBtn.Click += new System.EventHandler(this.listBtn_Click);
             // 
             // araBtn
             // 
@@ -131,7 +137,7 @@
             this.araBtn.TabIndex = 43;
             this.araBtn.Text = "ARA";
             this.araBtn.UseVisualStyleBackColor = false;
-            this.araBtn.Click += new System.EventHandler(this.button1_Click);
+            this.araBtn.Click += new System.EventHandler(this.araBtn_Click);
             // 
             // aratxt
             // 
@@ -145,10 +151,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(713, 356);
+            this.ClientSize = new System.Drawing.Size(596, 285);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Kişi Ekle";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
